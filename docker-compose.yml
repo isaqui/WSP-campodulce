@@ -1,0 +1,11 @@
+version: "3"
+services:
+  wsp-campodulce:
+    build: .
+    container_name: wsp-campodulce-produccion
+    restart: unless-stopped
+    cpus: 0.3
+    ports:
+      - "${PORT}:${PORT}"
+    env_file:
+      - .env
