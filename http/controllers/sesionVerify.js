@@ -19,5 +19,6 @@ const ctrlSesionVerify = async (req, res) => {
     } catch (error) {
       res.send({ data: "Error" }); 
     }
-}; 
+};
+
 module.exports = { ctrlSesionVerify };

@@ -22,7 +22,6 @@ const main = async () => {
         password: process.env.MYSQL_DB_PASSWORD,
         port: process.env.MYSQL_DB_PORT,
     })
-    
     //const adapterDB = new MockAdapter()
     //const adapterFlow = createFlow([flowPrincipal])
     const adapterFlow = createFlow([flowWelcome])
@@ -33,7 +32,7 @@ const main = async () => {
         provider: adapterProvider,
         database: adapterDB,
     })
-
+    
     //QRPortalWeb()
     httpServer.start();
 }
