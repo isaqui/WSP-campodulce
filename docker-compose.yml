@@ -4,7 +4,10 @@ services:
     build: .
     container_name: wsp-campodulce-produccion
     restart: unless-stopped
-    cpus: 0.3
+    deploy:
+      resources:
+        limits:
+          cpus: '0.1'
     ports:
       - "${PORT}:${PORT}"
     env_file:
